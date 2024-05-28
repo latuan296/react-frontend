@@ -1,8 +1,8 @@
 import React from 'react'
-import './UserList.css'
+
 import UserItem from './UserItem';
 import Card from '../../shared/components/UIElements/Card';
-
+import './UserList.css'
 
 const UserList = props => {
   if (props.items.length === 0) {
@@ -13,7 +13,7 @@ const UserList = props => {
     </div>
   }
 
-  return <ul className="user-list">
+  return (<ul className="user-list">
     {props.items.map(user => (
       <UserItem
         key={user.id}
@@ -23,7 +23,7 @@ const UserList = props => {
         placeCount={user.places}
       />
     ))}
-  </ul>
+  </ul>)
 };
 
 export default UserList;
